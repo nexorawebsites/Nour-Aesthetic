@@ -1,4 +1,6 @@
 
+
+```html
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
@@ -13,26 +15,14 @@
     <style>
         *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
         :root{
-            --beige:#F5F0EB;
-            --beige-dark:#E8DDD3;
-            --light-brown:#B8956A;
-            --brown:#8B6F47;
-            --dark-brown:#5C4A2E;
-            --white:#FFFFFF;
-            --off-white:#FDFBF9;
-            --gold:#D4A847;
-            --gold-light:#E8C97A;
-            --gold-dark:#B8922E;
-            --text-dark:#2C1810;
-            --text-medium:#5C4A2E;
-            --text-light:#8B7355;
-            --shadow-sm:0 2px 8px rgba(92,74,46,0.08);
-            --shadow-md:0 4px 20px rgba(92,74,46,0.12);
-            --shadow-lg:0 8px 40px rgba(92,74,46,0.16);
-            --shadow-xl:0 16px 60px rgba(92,74,46,0.2);
+            --beige:#F5F0EB;--beige-dark:#E8DDD3;--light-brown:#B8956A;--brown:#8B6F47;--dark-brown:#5C4A2E;
+            --white:#FFFFFF;--off-white:#FDFBF9;--gold:#D4A847;--gold-light:#E8C97A;--gold-dark:#B8922E;
+            --text-dark:#2C1810;--text-medium:#5C4A2E;--text-light:#8B7355;
+            --shadow-sm:0 2px 8px rgba(92,74,46,0.08);--shadow-md:0 4px 20px rgba(92,74,46,0.12);
+            --shadow-lg:0 8px 40px rgba(92,74,46,0.16);--shadow-xl:0 16px 60px rgba(92,74,46,0.2);
             --transition:all 0.4s cubic-bezier(0.25,0.46,0.45,0.94);
-            --instagram:#E1306C;
-            --instagram-gradient:linear-gradient(45deg,#f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%);
+            --instagram:#E1306C;--instagram-gradient:linear-gradient(45deg,#f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%);
+            --whatsapp:#25D366;
         }
         html{scroll-behavior:smooth;font-size:16px}
         body{font-family:'Cairo',sans-serif;background-color:var(--off-white);color:var(--text-dark);line-height:1.8;overflow-x:hidden}
@@ -128,9 +118,10 @@
         .product-bottom{display:flex;align-items:center;justify-content:space-between;gap:15px;flex-wrap:wrap}
         .product-price{font-family:'Cairo',sans-serif;font-size:1.5rem;font-weight:800;color:var(--light-brown)}
         .product-price small{font-size:.8rem;font-weight:400;color:var(--text-light)}
-        .btn-order-instagram{display:inline-flex;align-items:center;gap:8px;background:var(--instagram-gradient);color:var(--white);padding:12px 24px;border-radius:30px;text-decoration:none;font-weight:700;font-size:.9rem;transition:var(--transition);border:none;cursor:pointer;font-family:'Cairo',sans-serif}
-        .btn-order-instagram:hover{transform:translateY(-2px);box-shadow:0 5px 20px rgba(225,48,108,0.35)}
-        .btn-order-instagram svg{width:18px;height:18px;fill:currentColor}
+
+        .btn-whatsapp-order{display:inline-flex;align-items:center;gap:8px;background:#25D366;color:var(--white);padding:12px 24px;border-radius:30px;text-decoration:none;font-weight:700;font-size:.9rem;transition:var(--transition);border:none;cursor:pointer;font-family:'Cairo',sans-serif}
+        .btn-whatsapp-order:hover{background:#1DA851;transform:translateY(-2px);box-shadow:0 5px 20px rgba(37,211,102,0.35)}
+        .btn-whatsapp-order svg{width:18px;height:18px;fill:currentColor}
 
         .features-section{background:linear-gradient(135deg,var(--beige) 0%,var(--beige-dark) 100%);position:relative}
         .features-section::before{content:'';position:absolute;top:0;left:0;right:0;bottom:0;background:url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23D4A847' fill-opacity='0.04'%3E%3Cpath d='M20 20l-4-4v8l4-4z'/%3E%3C/g%3E%3C/svg%3E")}
@@ -191,11 +182,17 @@
         .contact-info-card p{color:var(--text-light);font-size:.9rem;line-height:1.8}
         .social-links{display:flex;gap:12px;margin-top:15px}
         .social-link{width:45px;height:45px;background:linear-gradient(135deg,var(--beige),var(--beige-dark));border-radius:12px;display:flex;align-items:center;justify-content:center;text-decoration:none;transition:var(--transition)}
-        .social-link:hover{background:var(--instagram-gradient);transform:translateY(-3px)}
+        .social-link:hover{transform:translateY(-3px)}
+        .social-link.ig:hover{background:var(--instagram-gradient)}
+        .social-link.wa:hover{background:#25D366}
         .social-link svg{width:20px;height:20px;fill:var(--text-medium);transition:var(--transition)}
         .social-link:hover svg{fill:var(--white)}
-        .social-link-large{display:flex;align-items:center;gap:12px;background:var(--instagram-gradient);color:var(--white);padding:15px 25px;border-radius:15px;text-decoration:none;font-weight:700;font-size:1rem;transition:var(--transition);margin-top:15px}
-        .social-link-large:hover{transform:translateY(-3px);box-shadow:0 8px 25px rgba(225,48,108,0.35)}
+        .social-link-large{display:flex;align-items:center;gap:12px;color:var(--white);padding:15px 25px;border-radius:15px;text-decoration:none;font-weight:700;font-size:1rem;transition:var(--transition);margin-top:15px}
+        .social-link-large:hover{transform:translateY(-3px)}
+        .social-link-large.ig{background:var(--instagram-gradient)}
+        .social-link-large.ig:hover{box-shadow:0 8px 25px rgba(225,48,108,0.35)}
+        .social-link-large.wa{background:#25D366}
+        .social-link-large.wa:hover{box-shadow:0 8px 25px rgba(37,211,102,0.35)}
         .social-link-large svg{width:22px;height:22px;fill:currentColor}
 
         .footer{background:linear-gradient(135deg,var(--dark-brown),var(--text-dark));color:var(--beige);padding:60px 0 30px}
@@ -204,9 +201,14 @@
         .footer-logo-img{width:45px;height:45px;object-fit:contain;border-radius:50%;border:2px solid rgba(212,168,71,0.4)}
         .footer-brand h3{font-family:'Aref Ruqaa',serif;font-size:1.5rem;color:var(--gold)}
         .footer-brand p{color:rgba(245,240,235,0.7);font-size:.9rem;line-height:1.9}
-        .footer-instagram{display:inline-flex;align-items:center;gap:8px;background:var(--instagram-gradient);color:var(--white);padding:10px 20px;border-radius:25px;text-decoration:none;font-weight:600;font-size:.85rem;transition:var(--transition);margin-top:10px}
-        .footer-instagram:hover{transform:translateY(-2px);box-shadow:0 5px 20px rgba(225,48,108,0.4)}
-        .footer-instagram svg{width:16px;height:16px;fill:currentColor}
+        .footer-social-btns{display:flex;gap:10px;margin-top:15px;flex-wrap:wrap}
+        .footer-social-btn{display:inline-flex;align-items:center;gap:8px;color:var(--white);padding:10px 20px;border-radius:25px;text-decoration:none;font-weight:600;font-size:.85rem;transition:var(--transition)}
+        .footer-social-btn:hover{transform:translateY(-2px)}
+        .footer-social-btn.ig{background:var(--instagram-gradient)}
+        .footer-social-btn.ig:hover{box-shadow:0 5px 20px rgba(225,48,108,0.4)}
+        .footer-social-btn.wa{background:#25D366}
+        .footer-social-btn.wa:hover{box-shadow:0 5px 20px rgba(37,211,102,0.4)}
+        .footer-social-btn svg{width:16px;height:16px;fill:currentColor}
         .footer-links h4,.footer-contact h4{font-family:'Aref Ruqaa',serif;font-size:1.2rem;color:var(--gold-light);margin-bottom:20px}
         .footer-links ul{list-style:none}
         .footer-links li{margin-bottom:10px}
@@ -217,10 +219,10 @@
         .footer-bottom p{color:rgba(245,240,235,0.5);font-size:.85rem}
         .footer-bottom a{color:var(--gold);text-decoration:none}
 
-        .instagram-float{position:fixed;bottom:25px;left:25px;width:60px;height:60px;background:var(--instagram-gradient);border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 20px rgba(225,48,108,0.4);z-index:999;transition:var(--transition);text-decoration:none;animation:insta-pulse 2s infinite}
-        .instagram-float:hover{transform:scale(1.1);box-shadow:0 6px 30px rgba(225,48,108,0.5)}
-        .instagram-float svg{width:28px;height:28px;fill:white}
-        @keyframes insta-pulse{0%,100%{box-shadow:0 4px 20px rgba(225,48,108,0.4)}50%{box-shadow:0 4px 30px rgba(225,48,108,0.6),0 0 0 10px rgba(225,48,108,0.1)}}
+        .whatsapp-float{position:fixed;bottom:25px;left:25px;width:60px;height:60px;background:#25D366;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 20px rgba(37,211,102,0.4);z-index:999;transition:var(--transition);text-decoration:none;animation:wa-pulse 2s infinite}
+        .whatsapp-float:hover{transform:scale(1.1);box-shadow:0 6px 30px rgba(37,211,102,0.5)}
+        .whatsapp-float svg{width:28px;height:28px;fill:white}
+        @keyframes wa-pulse{0%,100%{box-shadow:0 4px 20px rgba(37,211,102,0.4)}50%{box-shadow:0 4px 30px rgba(37,211,102,0.6),0 0 0 10px rgba(37,211,102,0.1)}}
 
         .back-to-top{position:fixed;bottom:25px;right:25px;width:50px;height:50px;background:linear-gradient(135deg,var(--gold),var(--light-brown));border-radius:50%;display:flex;align-items:center;justify-content:center;z-index:999;opacity:0;visibility:hidden;transition:var(--transition);cursor:pointer;border:none;box-shadow:var(--shadow-md)}
         .back-to-top.visible{opacity:1;visibility:visible}
@@ -243,6 +245,7 @@
             .about-content{grid-template-columns:1fr;gap:40px}.contact-content{grid-template-columns:1fr}
             .footer-content{grid-template-columns:1fr;text-align:center}
             .footer-brand-header{justify-content:center}.footer-contact p{justify-content:center}
+            .footer-social-btns{justify-content:center}
             .section-title{font-size:2rem}
         }
         @media(max-width:768px){
@@ -262,7 +265,7 @@
         @media(max-width:480px){
             .hero h1{font-size:1.7rem}.section-title{font-size:1.6rem}
             .product-bottom{flex-direction:column;align-items:flex-start}
-            .btn-order-instagram{width:100%;justify-content:center}
+            .btn-whatsapp-order{width:100%;justify-content:center}
             .about-stats{grid-template-columns:1fr}.nav-brand-text{font-size:1rem}
         }
     </style>
@@ -275,15 +278,12 @@
             <div class="loader-spinner"></div>
         </div>
     </div>
-
     <div class="mobile-overlay" id="mobileOverlay"></div>
-
     <div class="image-modal" id="imageModal">
         <button class="modal-close" id="modalClose">✕</button>
         <img src="" alt="" id="modalImage">
     </div>
 
-    <!-- Navbar -->
     <nav class="navbar" id="navbar">
         <div class="container">
             <a href="#" class="nav-brand">
@@ -306,11 +306,8 @@
         </div>
     </nav>
 
-    <!-- Hero -->
     <section class="hero" id="home">
-        <div class="hero-decoration"></div>
-        <div class="hero-decoration"></div>
-        <div class="hero-decoration"></div>
+        <div class="hero-decoration"></div><div class="hero-decoration"></div><div class="hero-decoration"></div>
         <div class="hero-content">
             <div class="hero-logo-container">
                 <img src="https://i.imgur.com/UNHQTOo.jpeg" alt="Nour Aesthetic Logo" class="hero-logo-image">
@@ -332,7 +329,6 @@
         <div class="hero-scroll"><span>اكتشف المزيد</span><div class="scroll-indicator"></div></div>
     </section>
 
-    <!-- Products -->
     <section class="section products-section" id="products">
         <div class="container">
             <div class="section-header fade-up">
@@ -345,105 +341,42 @@
         </div>
     </section>
 
-    <!-- Features -->
     <section class="section features-section" id="features">
         <div class="container">
             <div class="section-header fade-up">
                 <div class="section-subtitle">✦ لماذا نحن ✦</div>
                 <h2 class="section-title">مميزات Nour Aesthetic</h2>
                 <div class="section-divider"></div>
-                <p class="section-desc">نسعى لتقديم أفضل تجربة لعملائنا من خلال الجودة والتميز في كل تفصيل</p>
+                <p class="section-desc">نسعى لتقديم أفضل تجربة لعملائنا من خلال الجودة والتميز</p>
             </div>
             <div class="features-grid">
-                <div class="feature-card fade-up">
-                    <div class="feature-icon"><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></div>
-                    <h3 class="feature-title">جودة طباعة عالية</h3>
-                    <p class="feature-desc">طباعة احترافية بأعلى دقة ووضوح على خامات فاخرة تدوم طويلاً</p>
-                </div>
-                <div class="feature-card fade-up">
-                    <div class="feature-icon"><svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg></div>
-                    <h3 class="feature-title">تصاميم فريدة</h3>
-                    <p class="feature-desc">تصاميم عربية حصرية ومميزة لا تجدها في أي مكان آخر</p>
-                </div>
-                <div class="feature-card fade-up">
-                    <div class="feature-icon"><svg viewBox="0 0 24 24"><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/></svg></div>
-                    <h3 class="feature-title">للمنازل والمكاتب</h3>
-                    <p class="feature-desc">لوحاتنا مناسبة لجميع المساحات من غرف المعيشة إلى المكاتب</p>
-                </div>
-                <div class="feature-card fade-up">
-                    <div class="feature-icon"><svg viewBox="0 0 24 24"><path d="M18 18.5c.83 0 1.5-.67 1.5-1.5s-.67-1.5-1.5-1.5-1.5.67-1.5 1.5.67 1.5 1.5 1.5zM19.5 9.5L21 12h-3l1.5-2.5zM6 18.5c.83 0 1.5-.67 1.5-1.5S6.83 15.5 6 15.5 4.5 16.17 4.5 17 5.17 18.5 6 18.5zM20 8h-3V4H3c-1.1 0-2 .9-2 2v11h2c0 1.66 1.34 3 3 3s3-1.34 3-3h6c0 1.66 1.34 3 3 3s3-1.34 3-3h2v-5l-3-4z"/></svg></div>
-                    <h3 class="feature-title">توصيل سريع</h3>
-                    <p class="feature-desc">نوصل طلبك بعناية فائقة وتغليف آمن إلى باب منزلك بسرعة</p>
-                </div>
-                <div class="feature-card fade-up">
-                    <div class="feature-icon"><svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg></div>
-                    <h3 class="feature-title">دعم عبر إنستغرام</h3>
-                    <p class="feature-desc">تواصل معنا مباشرة عبر إنستغرام وسنسعد بخدمتك</p>
-                </div>
+                <div class="feature-card fade-up"><div class="feature-icon"><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></div><h3 class="feature-title">جودة طباعة عالية</h3><p class="feature-desc">طباعة احترافية بأعلى دقة على خامات فاخرة</p></div>
+                <div class="feature-card fade-up"><div class="feature-icon"><svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg></div><h3 class="feature-title">تصاميم فريدة</h3><p class="feature-desc">تصاميم عربية حصرية ومميزة</p></div>
+                <div class="feature-card fade-up"><div class="feature-icon"><svg viewBox="0 0 24 24"><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/></svg></div><h3 class="feature-title">للمنازل والمكاتب</h3><p class="feature-desc">مناسبة لجميع المساحات والأماكن</p></div>
+                <div class="feature-card fade-up"><div class="feature-icon"><svg viewBox="0 0 24 24"><path d="M18 18.5c.83 0 1.5-.67 1.5-1.5s-.67-1.5-1.5-1.5-1.5.67-1.5 1.5.67 1.5 1.5 1.5zM19.5 9.5L21 12h-3l1.5-2.5zM6 18.5c.83 0 1.5-.67 1.5-1.5S6.83 15.5 6 15.5 4.5 16.17 4.5 17 5.17 18.5 6 18.5zM20 8h-3V4H3c-1.1 0-2 .9-2 2v11h2c0 1.66 1.34 3 3 3s3-1.34 3-3h6c0 1.66 1.34 3 3 3s3-1.34 3-3h2v-5l-3-4z"/></svg></div><h3 class="feature-title">توصيل سريع</h3><p class="feature-desc">توصيل آمن وسريع لباب منزلك</p></div>
+                <div class="feature-card fade-up"><div class="feature-icon"><svg viewBox="0 0 24 24"><path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm0 14H5.17L4 17.17V4h16v12z"/></svg></div><h3 class="feature-title">دعم مباشر</h3><p class="feature-desc">تواصل معنا عبر واتساب وإنستغرام</p></div>
             </div>
         </div>
     </section>
 
-    <!-- Testimonials -->
     <section class="section testimonials-section" id="testimonials">
         <div class="container">
             <div class="section-header fade-up">
                 <div class="section-subtitle">✦ عملاؤنا يتحدثون ✦</div>
                 <h2 class="section-title">آراء عملائنا</h2>
                 <div class="section-divider"></div>
-                <p class="section-desc">نفتخر بثقة عملائنا ونسعد بمشاركتهم تجاربهم الجميلة معنا</p>
+                <p class="section-desc">نفتخر بثقة عملائنا ونسعد بتجاربهم الجميلة</p>
             </div>
             <div class="testimonials-grid">
-                <div class="testimonial-card fade-up">
-                    <div class="testimonial-quote">"</div>
-                    <p class="testimonial-text">لوحات كتير حلوة! ضافوا لمسة جمالية على صالون البيت. الجودة فوق المتوقع والتغليف كان ممتاز. يسلمو Nour Aesthetic على هالشغل الرائع.</p>
-                    <div class="testimonial-stars">★★★★★</div>
-                    <div class="testimonial-author">
-                        <div class="testimonial-avatar">ن ح</div>
-                        <div><div class="testimonial-name">نادين حداد</div><div class="testimonial-location">بيروت، لبنان</div></div>
-                    </div>
-                </div>
-                <div class="testimonial-card fade-up">
-                    <div class="testimonial-quote">"</div>
-                    <p class="testimonial-text">شريت ٣ لوحات للمكتب وكانت النتيجة مبهرة! الزملاء كتير حبّوا التصاميم العربية الراقية. خدمة ممتازة وتوصيل سريع. بنصح الكل يتعاملوا معهم.</p>
-                    <div class="testimonial-stars">★★★★★</div>
-                    <div class="testimonial-author">
-                        <div class="testimonial-avatar">ك ع</div>
-                        <div><div class="testimonial-name">كريم عيتاني</div><div class="testimonial-location">طرابلس، لبنان</div></div>
-                    </div>
-                </div>
-                <div class="testimonial-card fade-up">
-                    <div class="testimonial-quote">"</div>
-                    <p class="testimonial-text">هدية مثالية! هديت رفيقتي لوحة بمناسبة خطوبتها وكتير فرحانة فيها. اللوحة أنيقة والألوان طبيعية والخط العربي حلو كتير. أكيد رح كرر الشراء.</p>
-                    <div class="testimonial-stars">★★★★★</div>
-                    <div class="testimonial-author">
-                        <div class="testimonial-avatar">ر م</div>
-                        <div><div class="testimonial-name">رانيا مراد</div><div class="testimonial-location">جونية، لبنان</div></div>
-                    </div>
-                </div>
-                <div class="testimonial-card fade-up">
-                    <div class="testimonial-quote">"</div>
-                    <p class="testimonial-text">من أحلى اللوحات يلي شريتها بحياتي. التصميم الهندسي عطا الصالون طابع فخم ومميز. الطباعة عالية الجودة والبرواز متقن. تجربة رائعة من أولها لآخرها.</p>
-                    <div class="testimonial-stars">★★★★★</div>
-                    <div class="testimonial-author">
-                        <div class="testimonial-avatar">و ش</div>
-                        <div><div class="testimonial-name">وسام شمس الدين</div><div class="testimonial-location">صيدا، لبنان</div></div>
-                    </div>
-                </div>
-                <div class="testimonial-card fade-up">
-                    <div class="testimonial-quote">"</div>
-                    <p class="testimonial-text">تعاملت مع عدة محلات قبل هيك بس Nour Aesthetic شي تاني. اللوحات فعلاً فاخرة وبتحسّك بالراحة والجمال. الخامات ممتازة والدعم سريع وكتير متعاونين.</p>
-                    <div class="testimonial-stars">★★★★★</div>
-                    <div class="testimonial-author">
-                        <div class="testimonial-avatar">ل ق</div>
-                        <div><div class="testimonial-name">لارا قاسم</div><div class="testimonial-location">زحلة، لبنان</div></div>
-                    </div>
-                </div>
+                <div class="testimonial-card fade-up"><div class="testimonial-quote">"</div><p class="testimonial-text">لوحات كتير حلوة! ضافوا لمسة جمالية على صالون البيت. الجودة فوق المتوقع والتغليف كان ممتاز. يسلمو على هالشغل الرائع.</p><div class="testimonial-stars">★★★★★</div><div class="testimonial-author"><div class="testimonial-avatar">⭐</div><div><div class="testimonial-name">عميل مميز</div><div class="testimonial-location">بيروت، لبنان</div></div></div></div>
+                <div class="testimonial-card fade-up"><div class="testimonial-quote">"</div><p class="testimonial-text">شريت ٣ لوحات للمكتب وكانت النتيجة مبهرة! الكل حبّوا التصاميم العربية الراقية. خدمة ممتازة وتوصيل سريع. بنصح الكل يتعاملوا معهم.</p><div class="testimonial-stars">★★★★★</div><div class="testimonial-author"><div class="testimonial-avatar">⭐</div><div><div class="testimonial-name">عميل مميز</div><div class="testimonial-location">طرابلس، لبنان</div></div></div></div>
+                <div class="testimonial-card fade-up"><div class="testimonial-quote">"</div><p class="testimonial-text">هدية مثالية! هديت رفيقتي لوحة بمناسبة خطوبتها وكتير فرحانة فيها. اللوحة أنيقة والألوان طبيعية. أكيد رح كرر الشراء.</p><div class="testimonial-stars">★★★★★</div><div class="testimonial-author"><div class="testimonial-avatar">⭐</div><div><div class="testimonial-name">عميلة مميزة</div><div class="testimonial-location">جونية، لبنان</div></div></div></div>
+                <div class="testimonial-card fade-up"><div class="testimonial-quote">"</div><p class="testimonial-text">من أحلى اللوحات يلي شريتها بحياتي. التصميم عطا الصالون طابع فخم ومميز. الطباعة عالية الجودة والبرواز متقن. تجربة رائعة.</p><div class="testimonial-stars">★★★★★</div><div class="testimonial-author"><div class="testimonial-avatar">⭐</div><div><div class="testimonial-name">عميل مميز</div><div class="testimonial-location">صيدا، لبنان</div></div></div></div>
+                <div class="testimonial-card fade-up"><div class="testimonial-quote">"</div><p class="testimonial-text">تعاملت مع عدة محلات قبل هيك بس Nour Aesthetic شي تاني. اللوحات فعلاً فاخرة وبتحسّك بالراحة. الخامات ممتازة والدعم كتير متعاونين.</p><div class="testimonial-stars">★★★★★</div><div class="testimonial-author"><div class="testimonial-avatar">⭐</div><div><div class="testimonial-name">عميلة مميزة</div><div class="testimonial-location">زحلة، لبنان</div></div></div></div>
             </div>
         </div>
     </section>
 
-    <!-- About -->
     <section class="section about-section" id="about">
         <div class="container">
             <div class="about-content">
@@ -451,15 +384,15 @@
                     <div class="section-subtitle">✦ قصتنا ✦</div>
                     <h3>من نحن - Nour Aesthetic</h3>
                     <p><strong>Nour Aesthetic</strong> هي علامة متخصصة بتصميم وبيع اللوحات الجدارية العربية الراقية. انطلقنا من شغفنا بالفن العربي الأصيل وإيماننا إنو كل مساحة بتستحق تتزيّن بلمسة من الجمال والأناقة.</p>
-                    <p>منختار تصاميمنا بعناية فائقة لتعكس روح الحضارة العربية، من جمال الخط العربي لروعة الزخارف الهندسية والتصاميم المعاصرة، ومنطبعها على أجود الخامات لنضمنلكم لوحات بتدوم سنين طويلة.</p>
-                    <p>رسالتنا بسيطة: بدنا نخلّي الفن العربي بمتناول كل بيت، ومنؤمن إنو اللوحة الحلوة مش بس ديكور، هيي روح بتنبض بالمكان وبتنوّر الحيطان بالجمال.</p>
+                    <p>منختار تصاميمنا بعناية فائقة لتعكس روح الحضارة العربية، من جمال الخط العربي لروعة الزخارف والتصاميم المعاصرة، ومنطبعها على أجود الخامات.</p>
+                    <p>رسالتنا بسيطة: بدنا نخلّي الفن العربي بمتناول كل بيت، ومنؤمن إنو اللوحة الحلوة مش بس ديكور، هيي روح بتنبض بالمكان.</p>
                     <div class="about-stats">
                         <div class="stat-item"><span class="stat-number" data-target="500">0</span><span class="stat-label">عميل سعيد</span></div>
                         <div class="stat-item"><span class="stat-number" data-target="150">0</span><span class="stat-label">تصميم فريد</span></div>
                         <div class="stat-item"><span class="stat-number" data-target="50">0</span><span class="stat-label">مدينة نخدمها</span></div>
                     </div>
                     <div class="about-instagram-cta">
-                        <p>تابعنا على إنستغرام لتشوف أحدث التصاميم والعروض الحصرية</p>
+                        <p>تابعنا على إنستغرام لتشوف أحدث التصاميم والعروض</p>
                         <a href="https://www.instagram.com/nouns_aesthetic?igsh=MTM5cmZncnA4ejl2Yw==" target="_blank" class="btn-instagram">
                             <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
                             @nouns_aesthetic
@@ -477,7 +410,6 @@
         </div>
     </section>
 
-    <!-- Contact -->
     <section class="section contact-section" id="contact">
         <div class="container">
             <div class="section-header fade-up">
@@ -490,7 +422,7 @@
                 <div class="contact-form-wrapper fade-up">
                     <h3>ابعتلنا رسالة</h3>
                     <form id="contactForm" onsubmit="handleSubmit(event)">
-                        <div class="form-group"><label for="name">الاسم الكامل</label><input type="text" id="name" placeholder="أدخل اسمك الكامل" required></div>
+                        <div class="form-group"><label for="name">الاسم</label><input type="text" id="name" placeholder="أدخل اسمك" required></div>
                         <div class="form-group"><label for="email">البريد الإلكتروني</label><input type="email" id="email" placeholder="أدخل بريدك الإلكتروني" required></div>
                         <div class="form-group"><label for="phone">رقم الهاتف</label><input type="tel" id="phone" placeholder="أدخل رقم هاتفك"></div>
                         <div class="form-group"><label for="message">رسالتك</label><textarea id="message" placeholder="اكتب رسالتك هون..." required></textarea></div>
@@ -499,22 +431,33 @@
                 </div>
                 <div class="contact-info fade-up">
                     <div class="contact-info-card">
-                        <h4><svg width="22" height="22" viewBox="0 0 24 24" fill="var(--gold)"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg> تواصل عبر إنستغرام</h4>
-                        <p>منكون كتير مبسوطين نرد على كل استفساراتكم ونساعدكم تختاروا اللوحة المثالية لمساحتكم.</p>
-                        <a href="https://www.instagram.com/nouns_aesthetic?igsh=MTM5cmZncnA4ejl2Yw==" target="_blank" class="social-link-large">
+                        <h4>💬 واتساب</h4>
+                        <p>تواصل معنا مباشرة عبر واتساب للطلب أو الاستفسار</p>
+                        <a href="https://wa.me/96181728498?text=مرحبا، حابب أستفسر عن اللوحات الفنية - السعر $15" target="_blank" class="social-link-large wa">
+                            <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                            راسلنا على واتساب
+                        </a>
+                    </div>
+                    <div class="contact-info-card">
+                        <h4>📸 إنستغرام</h4>
+                        <p>تابعنا وتواصل معنا عبر إنستغرام</p>
+                        <a href="https://www.instagram.com/nouns_aesthetic?igsh=MTM5cmZncnA4ejl2Yw==" target="_blank" class="social-link-large ig">
                             <svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
                             راسلنا على إنستغرام
                         </a>
                     </div>
                     <div class="contact-info-card">
-                        <h4><svg width="22" height="22" viewBox="0 0 24 24" fill="var(--gold)"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg> البريد الإلكتروني</h4>
+                        <h4>📧 البريد الإلكتروني</h4>
                         <p>info@nouraesthetic.com</p>
                     </div>
                     <div class="contact-info-card">
-                        <h4><svg width="22" height="22" viewBox="0 0 24 24" fill="var(--gold)"><path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z"/></svg> تابعنا</h4>
+                        <h4>🔗 تابعنا</h4>
                         <div class="social-links">
-                            <a href="https://www.instagram.com/nouns_aesthetic?igsh=MTM5cmZncnA4ejl2Yw==" target="_blank" class="social-link" aria-label="Instagram">
+                            <a href="https://www.instagram.com/nouns_aesthetic?igsh=MTM5cmZncnA4ejl2Yw==" target="_blank" class="social-link ig" aria-label="Instagram">
                                 <svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+                            </a>
+                            <a href="https://wa.me/96181728498" target="_blank" class="social-link wa" aria-label="WhatsApp">
+                                <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
                             </a>
                         </div>
                     </div>
@@ -523,103 +466,97 @@
         </div>
     </section>
 
-    <!-- Footer -->
     <footer class="footer">
         <div class="container">
             <div class="footer-content">
                 <div class="footer-brand">
                     <div class="footer-brand-header">
-                        <img src="https://i.imgur.com/UNHQTOo.jpeg" alt="Nour Aesthetic Logo" class="footer-logo-img">
+                        <img src="https://i.imgur.com/UNHQTOo.jpeg" alt="Logo" class="footer-logo-img">
                         <h3>Nour Aesthetic</h3>
                     </div>
-                    <p>علامة متخصصة باللوحات الجدارية العربية الراقية. منسعى لنضيف الجمال والأناقة على كل مساحة من خلال تصاميمنا الفريدة وجودتنا العالية. كل لوحة من لوحاتنا هيي قطعة فنية بتحمل روح التراث العربي الأصيل.</p>
-                    <a href="https://www.instagram.com/nouns_aesthetic?igsh=MTM5cmZncnA4ejl2Yw==" target="_blank" class="footer-instagram">
-                        <svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
-                        @nouns_aesthetic
-                    </a>
+                    <p>علامة متخصصة باللوحات الجدارية العربية الراقية. منسعى لنضيف الجمال والأناقة على كل مساحة من خلال تصاميمنا الفريدة وجودتنا العالية.</p>
+                    <div class="footer-social-btns">
+                        <a href="https://www.instagram.com/nouns_aesthetic?igsh=MTM5cmZncnA4ejl2Yw==" target="_blank" class="footer-social-btn ig">
+                            <svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+                            إنستغرام
+                        </a>
+                        <a href="https://wa.me/96181728498" target="_blank" class="footer-social-btn wa">
+                            <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                            واتساب
+                        </a>
+                    </div>
                 </div>
                 <div class="footer-links">
                     <h4>روابط سريعة</h4>
                     <ul>
-                        <li><a href="#home">الرئيسية</a></li>
-                        <li><a href="#products">المنتجات</a></li>
-                        <li><a href="#features">مميزاتنا</a></li>
-                        <li><a href="#testimonials">آراء العملاء</a></li>
-                        <li><a href="#about">من نحن</a></li>
-                        <li><a href="#contact">التواصل</a></li>
+                        <li><a href="#home">الرئيسية</a></li><li><a href="#products">المنتجات</a></li>
+                        <li><a href="#features">مميزاتنا</a></li><li><a href="#testimonials">آراء العملاء</a></li>
+                        <li><a href="#about">من نحن</a></li><li><a href="#contact">التواصل</a></li>
                     </ul>
                 </div>
                 <div class="footer-contact">
                     <h4>تواصل معنا</h4>
                     <p>📧 info@nouraesthetic.com</p>
                     <p>📸 @nouns_aesthetic</p>
+                    <p>💬 واتساب: +961 81 728 498</p>
                     <p>📍 لبنان</p>
-                    <p>⏰ متاحون يومياً</p>
                 </div>
             </div>
-            <div class="footer-bottom">
-                <p>© 2024 <a href="#">Nour Aesthetic</a> - جميع الحقوق محفوظة | صُنع بـ ❤️ من لبنان</p>
-            </div>
+            <div class="footer-bottom"><p>© 2024 <a href="#">Nour Aesthetic</a> - جميع الحقوق محفوظة | صُنع بـ ❤️ من لبنان</p></div>
         </div>
     </footer>
 
-    <!-- Instagram Float -->
-    <a href="https://www.instagram.com/nouns_aesthetic?igsh=MTM5cmZncnA4ejl2Yw==" target="_blank" class="instagram-float" aria-label="تابعنا على إنستغرام">
-        <svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+    <a href="https://wa.me/96181728498?text=مرحبا، حابب أستفسر عن اللوحات الفنية - السعر $15" target="_blank" class="whatsapp-float" aria-label="تواصل عبر واتساب">
+        <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
     </a>
 
-    <!-- Back to Top -->
     <button class="back-to-top" id="backToTop" aria-label="العودة للأعلى">
         <svg viewBox="0 0 24 24"><path d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"/></svg>
     </button>
 
     <script>
-        // Instagram SVG (reusable)
-        const instaSVG = '<svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>';
+        var waNumber = '96181728498';
+        var waBase = 'https://wa.me/' + waNumber;
+        var instaLink = 'https://www.instagram.com/nouns_aesthetic?igsh=MTM5cmZncnA4ejl2Yw==';
+        var productPrice = '$15';
 
-        const instaLink = 'https://www.instagram.com/nouns_aesthetic?igsh=MTM5cmZncnA4ejl2Yw==';
+        var waSVG = '<svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>';
 
-        // Products data
-        const products = [
-            { img:'https://i.imgur.com/C2ueBrn.jpeg', badge:'مميز', cat:'خط عربي', name:'لوحة البسملة الشريفة', desc:'لوحة فنية راقية بخط عربي أصيل، مزينة بزخارف دقيقة تضفي على مكانك أجواء هادئة وأناقة لا تُضاهى. مثالية لغرفة المعيشة أو المدخل.', price:'25' },
-            { img:'https://i.imgur.com/v34EwQL.jpeg', badge:'جديد', cat:'زخارف هندسية', name:'لوحة الزخرفة الهندسية', desc:'تصميم هندسي مستوحى من فن الأرابيسك العريق، يجمع بين دقة التفاصيل وروعة التناسق ليضيف إلى ديكور منزلك بُعداً حضارياً فريداً.', price:'30' },
-            { img:'https://i.imgur.com/qlFOXa9.jpeg', badge:'', cat:'فن عربي', name:'لوحة النور الفنية', desc:'لوحة بخط ثلث رائع، محاطة بإطار ذهبي أنيق يبرز جمال التصميم ويضفي سكينة وطمأنينة على أرجاء المكان. قطعة فنية مميزة.', price:'35' },
-            { img:'https://i.imgur.com/6BIgquS.jpeg', badge:'الأكثر مبيعاً', cat:'فن معاصر', name:'لوحة الأصالة المعاصرة', desc:'مزيج فريد بين الأصالة العربية والتصميم المعاصر، تجمع بين الألوان الدافئة والخطوط الانسيابية لتخلق قطعة فنية تأسر الأبصار.', price:'40' },
-            { img:'https://i.imgur.com/waVRipH.jpeg', badge:'', cat:'خط ديواني', name:'لوحة الخط الديواني', desc:'تحفة فنية بالخط الديواني الجلي، تتراقص فيها الحروف العربية بانسياب وتناغم مذهل، مطبوعة على خامات فاخرة لديكور ساحر.', price:'28' },
-            { img:'https://i.imgur.com/yaahq7F.jpeg', badge:'حصري', cat:'فن هندسي', name:'لوحة التجلّي الهندسي', desc:'لوحة تستلهم جمالها من الأنماط الهندسية العربية العريقة، حيث تتشابك الأشكال المتقنة لتروي حكاية حضارة بلغة بصرية معاصرة.', price:'38' },
-            { img:'https://i.imgur.com/ewU9kGC.jpeg', badge:'', cat:'تراث عربي', name:'لوحة العبق التراثي', desc:'لوحة تنبض بعبق التراث العربي الأصيل، تجسد جمال الفن العربي القديم بلمسة عصرية أنيقة، مثالية لمن يعشق الأصالة ويقدّر التراث.', price:'32' },
-            { img:'https://i.imgur.com/SatO0oP.jpeg', badge:'إصدار محدود', cat:'فن راقي', name:'لوحة السكينة الفنية', desc:'لوحة تبعث في النفس السكينة والهدوء، تمزج بين جمال الخط العربي ودفء الألوان الطبيعية لتكوّن لوحة تملأ الفضاء سلاماً وجمالاً.', price:'45' }
+        var eyeSVG = '<svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 4.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5c-1.73-4.39-6-7.5-11-7.5zM12 17c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5zm0-8c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/></svg>';
+
+        var products = [
+            {img:'https://i.imgur.com/C2ueBrn.jpeg', badge:'مميز', cat:'خط عربي', name:'لوحة البسملة الشريفة', desc:'لوحة فنية راقية بخط عربي أصيل، تضفي على مكانك أجواء هادئة وأناقة لا تُضاهى. مثالية لغرفة المعيشة أو المدخل.'},
+            {img:'https://i.imgur.com/v34EwQL.jpeg', badge:'جديد', cat:'زخارف هندسية', name:'لوحة الزخرفة الهندسية', desc:'تصميم هندسي مستوحى من فن الأرابيسك، يجمع بين دقة التفاصيل وروعة التناسق ليضيف بُعداً حضارياً فريداً.'},
+            {img:'https://i.imgur.com/qlFOXa9.jpeg', badge:'', cat:'فن عربي', name:'لوحة النور الفنية', desc:'لوحة بخط ثلث رائع، محاطة بإطار أنيق يبرز جمال التصميم ويضفي جواً من الراحة والطمأنينة على المكان.'},
+            {img:'https://i.imgur.com/6BIgquS.jpeg', badge:'الأكثر مبيعاً', cat:'فن معاصر', name:'لوحة الأصالة المعاصرة', desc:'مزيج فريد بين الأصالة العربية والتصميم المعاصر، ألوان دافئة وخطوط انسيابية تأسر الأبصار.'},
+            {img:'https://i.imgur.com/waVRipH.jpeg', badge:'', cat:'خط ديواني', name:'لوحة الخط الديواني', desc:'تحفة فنية بالخط الديواني الجلي، حروف عربية تتراقص بانسياب مذهل، مطبوعة على خامات فاخرة.'},
+            {img:'https://i.imgur.com/yaahq7F.jpeg', badge:'حصري', cat:'فن هندسي', name:'لوحة التجلّي الهندسي', desc:'أنماط هندسية عربية عريقة، أشكال متقنة تروي حكاية حضارة بلغة بصرية معاصرة وأنيقة.'},
+            {img:'https://i.imgur.com/ewU9kGC.jpeg', badge:'', cat:'تراث عربي', name:'لوحة العبق التراثي', desc:'لوحة تنبض بعبق التراث العربي الأصيل، جمال الفن القديم بلمسة عصرية أنيقة ومميزة.'},
+            {img:'https://i.imgur.com/SatO0oP.jpeg', badge:'إصدار محدود', cat:'فن راقي', name:'لوحة السكينة الفنية', desc:'لوحة تبعث السكينة والهدوء، تمزج بين جمال الخط العربي ودفء الألوان الطبيعية بشكل ساحر.'}
         ];
 
-        // Render products
-        const grid = document.getElementById('productsGrid');
-        const eyeSVG = '<svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 4.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5c-1.73-4.39-6-7.5-11-7.5zM12 17c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5zm0-8c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/></svg>';
-
+        var grid = document.getElementById('productsGrid');
         products.forEach(function(p, i) {
-            const badgeHTML = p.badge ? '<span class="product-badge">' + p.badge + '</span>' : '';
-            grid.innerHTML += `
-            <div class="product-card fade-up" style="transition-delay:${i*0.1}s">
-                <div class="product-image-wrapper" onclick="openModal(this.querySelector('img'))">
-                    <img src="${p.img}" alt="${p.name}" loading="lazy">
-                    ${badgeHTML}
-                    <div class="product-overlay">
-                        <button class="product-quick-view" onclick="event.stopPropagation();openModal(this.closest('.product-card').querySelector('img'))">
-                            ${eyeSVG} عرض سريع
-                        </button>
-                    </div>
-                </div>
-                <div class="product-info">
-                    <div class="product-category">${p.cat}</div>
-                    <h3 class="product-name">${p.name}</h3>
-                    <p class="product-desc">${p.desc}</p>
-                    <div class="product-bottom">
-                        <div class="product-price">$${p.price} <small>USD</small></div>
-                        <a href="${instaLink}" target="_blank" class="btn-order-instagram">
-                            ${instaSVG} اطلب عبر إنستغرام
-                        </a>
-                    </div>
-                </div>
-            </div>`;
+            var badgeHTML = p.badge ? '<span class="product-badge">' + p.badge + '</span>' : '';
+            var waMsg = encodeURIComponent('مرحبا، حابب أطلب: ' + p.name + ' - السعر: ' + productPrice);
+            var waLink = waBase + '?text=' + waMsg;
+
+            grid.innerHTML += '<div class="product-card fade-up" style="transition-delay:'+i*0.1+'s">' +
+                '<div class="product-image-wrapper" onclick="openModal(this.querySelector(\'img\'))">' +
+                    '<img src="'+p.img+'" alt="'+p.name+'" loading="lazy">' +
+                    badgeHTML +
+                    '<div class="product-overlay"><button class="product-quick-view" onclick="event.stopPropagation();openModal(this.closest(\'.product-card\').querySelector(\'img\'))">'+eyeSVG+' عرض سريع</button></div>' +
+                '</div>' +
+                '<div class="product-info">' +
+                    '<div class="product-category">'+p.cat+'</div>' +
+                    '<h3 class="product-name">'+p.name+'</h3>' +
+                    '<p class="product-desc">'+p.desc+'</p>' +
+                    '<div class="product-bottom">' +
+                        '<div class="product-price">'+productPrice+' <small>USD</small></div>' +
+                        '<a href="'+waLink+'" target="_blank" class="btn-whatsapp-order">'+waSVG+' اطلب عبر واتساب</a>' +
+                    '</div>' +
+                '</div>' +
+            '</div>';
         });
 
         // Loader
@@ -627,20 +564,19 @@
             setTimeout(function() { document.getElementById('loader').classList.add('hidden'); }, 800);
         });
 
-        // Navbar scroll
-        const navbar = document.getElementById('navbar');
-        const backToTop = document.getElementById('backToTop');
+        // Navbar
+        var navbar = document.getElementById('navbar');
+        var backToTop = document.getElementById('backToTop');
         window.addEventListener('scroll', function() {
             navbar.classList.toggle('scrolled', window.scrollY > 80);
             backToTop.classList.toggle('visible', window.scrollY > 400);
         });
-
         backToTop.addEventListener('click', function() { window.scrollTo({top:0,behavior:'smooth'}); });
 
         // Mobile menu
-        const mobileToggle = document.getElementById('mobileToggle');
-        const navLinks = document.getElementById('navLinks');
-        const mobileOverlay = document.getElementById('mobileOverlay');
+        var mobileToggle = document.getElementById('mobileToggle');
+        var navLinks = document.getElementById('navLinks');
+        var mobileOverlay = document.getElementById('mobileOverlay');
         function closeMenu(){mobileToggle.classList.remove('active');navLinks.classList.remove('active');mobileOverlay.classList.remove('active');document.body.style.overflow=''}
         mobileToggle.addEventListener('click',function(){
             if(navLinks.classList.contains('active')){closeMenu()}else{this.classList.add('active');navLinks.classList.add('active');mobileOverlay.classList.add('active');document.body.style.overflow='hidden'}
@@ -653,8 +589,8 @@
             a.addEventListener('click',function(e){e.preventDefault();var t=document.querySelector(this.getAttribute('href'));if(t){window.scrollTo({top:t.getBoundingClientRect().top+window.pageYOffset-navbar.offsetHeight-20,behavior:'smooth'})}})
         });
 
-        // Intersection Observer
-        const observer = new IntersectionObserver(function(entries){
+        // Observer
+        var observer = new IntersectionObserver(function(entries){
             entries.forEach(function(entry){
                 if(entry.isIntersecting){
                     entry.target.classList.add('visible');
@@ -670,7 +606,7 @@
             update()
         }
 
-        // Image Modal
+        // Modal
         function openModal(imgEl){
             var modal=document.getElementById('imageModal');
             document.getElementById('modalImage').src=imgEl.src;
@@ -689,7 +625,6 @@
             setTimeout(function(){btn.textContent='إرسال الرسالة';btn.style.background='';e.target.reset()},3000)
         }
 
-        // Stagger delays for features & testimonials
         document.querySelectorAll('.features-grid .feature-card').forEach(function(c,i){c.style.transitionDelay=(i*0.1)+'s'});
         document.querySelectorAll('.testimonials-grid .testimonial-card').forEach(function(c,i){c.style.transitionDelay=(i*0.1)+'s'});
     </script>
